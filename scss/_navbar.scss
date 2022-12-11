@@ -1,0 +1,40 @@
+.search-group-icon{
+    background-color: #F6F6F6;
+    border-radius: 50px 0 0 50px;
+    border-right: 0px;
+}
+
+.search-group-input{
+    background-color: #F6F6F6;
+    border-radius: 0 50px  50px 0;
+    border-left: 0px;
+    &:focus{
+        border-color: #ced4da;
+        box-shadow: 0 0 0 0;
+        background-color: #F6F6F6;
+    }
+}
+
+.nav-accounts{
+    &:active{
+        border-color : white;
+    }
+}
+
+.dropdown-toggle::after{
+    content: normal;
+    @include lg(){
+        content: " ";
+    }
+}
+
+.dropdown-toggle{
+    border-radius: 50%;
+    --bs-btn-padding-x: 0rem;
+    --bs-btn-padding-y: 0rem;
+    @include lg(){
+        border-radius: var(--bs-btn-border-radius);
+        --bs-btn-padding-x: 0.75rem;
+        --bs-btn-padding-y: 0.375rem;
+    }
+}

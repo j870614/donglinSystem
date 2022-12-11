@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>寺務管理系統</title>
+    <link rel="stylesheet" href="../scss/all.css" />
+  </head>
+  <body>
+    <!-- 表頭導覽列 -->
+    <nav class="navbar navbar-light bg-white fixed-top">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <button
+            class="navbar-toggler my-0 d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#sidebar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a
+            class="navbar-brand d-flex align-items-center mx-2"
+            href="../admin/index.html"
+          >
+            <img
+              src="../img/1.Logo1.png"
+              alt=""
+              width="49"
+              height="80"
+              class="d-none d-lg-inline-block align-text-top me-3"
+            />
+            <img
+              src="../img/1.Logo1.png"
+              alt=""
+              width="20"
+              height="32"
+              class="d-inline-block d-lg-none align-text-top me-1"
+            />
+            <img
+              src="../img/3.tittle.png"
+              alt=""
+              width="228"
+              height="39"
+              class="d-none d-lg-inline-block align-text-top"
+            />
+            <h1
+              class="h2 fw-bolder d-none d-lg-inline-block align-text-top ms-5"
+            >
+              寺務管理系統
+            </h1>
+            <h1 class="h5 fw-bolder d-lg-none align-text-top m-0">
+              寺務管理系統
+            </h1>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-sign-up">
+      <div class="container-fluid">
+        <div class="row justify-content-center my-5">
+          <!-- 個人資料 -->
+          <!-- 通訊 -->
+          <div class="col-lg-5">
+            <div class="card p-2">
+              <div class="card-body">
+                <h2 class="fw-bold fs-3">請填寫個人資料</h2>
+
+                <div
+                  class="form-check form-check-inline d-inline-flex align-items-center"
+                  role="presentation"
+                >
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    id="male"
+                    value="male"
+                  />
+                  <label class="form-check-label fw-bold fs-4 ms-3" for="male"
+                    >男眾</label
+                  >
+                </div>
+                <div
+                  class="form-check form-check-inline d-inline-flex align-items-center ms-4"
+                  role="presentation"
+                >
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    id="female"
+                    value="female"
+                  />
+                  <label class="form-check-label fw-bold fs-4 ms-3" for="female"
+                    >女眾</label
+                  >
+                </div>
+
+                <form class="row g-3 mt-1">
+                  <div class="col-12">
+                    <h2 class="fw-bold fs-3">通訊方式</h2>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="cellphone" class="form-label">手機號碼</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="cellphone"
+                      placeholder="請輸入手機號碼"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="alias" class="form-label">市話號碼</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="alias"
+                      placeholder="請輸入市話號碼"
+                    />
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="name" class="form-label">LineID</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="請輸入LineID"
+                    />
+                  </div>
+
+                  <div class="row gy-3 gx-2">
+                    <div class="col-12">
+                      <h2 class="fw-bold fs-3">通訊地址</h2>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="country" class="form-label">國別</label>
+                      <select class="form-select" id="country">
+                        <option selected>請選擇國家</option>
+                        <option value="台灣">台灣</option>
+                        <option value="新加坡">新加坡</option>
+                        <option value="馬來西亞">馬來西亞</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-4">
+                      <label for="DateOfOrdination" class="form-label"
+                        >郵遞區號</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="DateOfOrdination"
+                        placeholder="郵遞區號"
+                        value="郵遞區號"
+                        disabled
+                        readonly
+                      />
+                    </div>
+
+                    <div class="col-md-4">
+                      <label for="country" class="form-label">縣市</label>
+                      <select class="form-select" id="country">
+                        <option selected>請選擇縣市</option>
+                        <option value="台北市">台北市</option>
+                        <option value="新北市">新北市</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="country" class="form-label">鄉鎮市區</label>
+                      <select class="form-select" id="country">
+                        <option selected>請選擇鄉鎮市區</option>
+                      </select>
+                    </div>
+                    <div class="col-8">
+                      <label for="address" class="form-label">詳細地址</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="address"
+                        placeholder="請輸入街道名稱"
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- 法名等 -->
+          <div class="col-lg-5">
+            <div class="card p-2">
+              <div class="card-body">
+                <h2 class="fw-bold fs-3">請填寫您的身份別</h2>
+                <div
+                  class="form-check form-check-inline d-inline-flex align-items-center"
+                  role="presentation"
+                >
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="identity"
+                    id="master"
+                    value="法師"
+                  />
+                  <label class="form-check-label fw-bold fs-4 ms-3" for="master"
+                    >法師</label
+                  >
+                </div>
+                <div
+                  class="form-check form-check-inline d-inline-flex align-items-center ms-4"
+                  role="presentation"
+                >
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="identity"
+                    id="buddhist"
+                    value="居士"
+                  />
+                  <label
+                    class="form-check-label fw-bold fs-4 ms-3"
+                    for="buddhist"
+                    >居士</label
+                  >
+                </div>
+
+                <form class="row g-3 mt-1">
+                  <div class="col-md-4">
+                    <label for="dharmaName" class="form-label">外號</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="dharmaName"
+                      placeholder="請輸入外號"
+                    />
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="alias" class="form-label">內號</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="alias"
+                      placeholder="請輸入內號"
+                    />
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="name" class="form-label">俗名</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="請輸入姓名"
+                    />
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="birthday" class="form-label">出生年月日</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="birthday"
+                      placeholder="請輸入出生年月日"
+                    />
+                  </div>
+
+                  <div class="row g-3">
+                    <div class="col-md-4">
+                      <label for="placeOfOrdination" class="form-label"
+                        >受戒道場</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="placeOfOrdination"
+                        placeholder="請輸入受戒道場"
+                      />
+                    </div>
+
+                    <div class="col-md-4">
+                      <label for="DateOfOrdination" class="form-label"
+                        >受具足戒日期</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="DateOfOrdination"
+                        placeholder="請輸入受戒日期"
+                      />
+                    </div>
+
+                    <div class="col-md-4">
+                      <label for="numOfAltar" class="form-label">壇別</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="numOfAltar"
+                        placeholder="請輸入壇別"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <label for="masterOfTonsure" class="form-label"
+                      >剃度師長徳號</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="masterOfTonsure"
+                      placeholder="請輸入剃度師長徳號"
+                    />
+                  </div>
+                  <div class="col-6">
+                    <label for="livingTemple" class="form-label">寶剎</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="livingTemple"
+                      placeholder="請輸入常住道場名稱"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="d-flex justify-content-end">
+                <a
+                  class="btn btn-outline-primary btn-lg px-5 py-2"
+                  href="./sign-up.html"
+                  role="button"
+                  >上一步</a
+                >
+                <a
+                  class="btn btn-primary btn-lg px-5 py-2 ms-3"
+                  href="./request-auth.html"
+                  role="button"
+                  >下一步</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center my-3">
+          <div class="col-6"></div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/all.js"></script>
+  </body>
+</html>

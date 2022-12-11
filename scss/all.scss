@@ -1,0 +1,54 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+@import "./variables";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+@import "./mixins/breakpoint-up";
+@import "fonts";
+@import "navbar";
+@import "sidebar";
+@import "login";
+@import "sign-up";
+
+
+$hover-color: #F9F9F9;
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background-color: #f6f6f6;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    
+  }
+}
+
+.menu-hover-color{
+  &:hover{
+    background-color: $secondary-tint;
+    padding: 10px;
+    border-radius:50%;
+  }
+}
+
+.badge{
+  font-weight : 100;
+}
+
+.btn-primary{
+  color: white;
+}
+
+.left{
+  width: 50%;
+  height: 100vh;
+  background-color: rgb(16, 15, 15);
+  background: url("../img/4.amitabha.png") left center / auto 100%;
+}
+
+

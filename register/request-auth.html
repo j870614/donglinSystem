@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>寺務管理系統</title>
+    <link rel="stylesheet" href="../scss/all.css" />
+  </head>
+  <body>
+    <!-- 表頭導覽列 -->
+    <nav class="navbar navbar-light bg-white fixed-top">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <button
+            class="navbar-toggler my-0 d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#sidebar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a
+            class="navbar-brand d-flex align-items-center mx-2"
+            href="../admin/index.html"
+          >
+            <img
+              src="../img/1.Logo1.png"
+              alt=""
+              width="49"
+              height="80"
+              class="d-none d-lg-inline-block align-text-top me-3"
+            />
+            <img
+              src="../img/1.Logo1.png"
+              alt=""
+              width="20"
+              height="32"
+              class="d-inline-block d-lg-none align-text-top me-1"
+            />
+            <img
+              src="../img/3.tittle.png"
+              alt=""
+              width="228"
+              height="39"
+              class="d-none d-lg-inline-block align-text-top"
+            />
+            <h1
+              class="h2 fw-bolder d-none d-lg-inline-block align-text-top ms-5"
+            >
+              寺務管理系統
+            </h1>
+            <h1 class="h5 fw-bolder d-lg-none align-text-top m-0">
+              寺務管理系統
+            </h1>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-sign-up">
+      <div class="container-fluid">
+        <div class="row justify-content-center my-5">
+          <!-- 權限申請 -->
+          <div class="col-lg-5">
+            <div class="card p-2">
+              <div class="card-body">
+                <h2 class="fw-bold fs-3 text-center">請選擇堂口名稱及執事</h2>
+                <form class="row g-3 mt-3 justify-content-center">
+                  <div class="col-md-4">
+                    <label for="country" class="form-label">堂口名稱</label>
+                    <select class="form-select" id="country">
+                      <option selected>請選擇堂口名稱</option>
+                      <option value="知客">知客</option>
+                      <option value="寮房">寮房</option>
+                      <option value="資訊">資訊</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="country" class="form-label">執事</label>
+                    <select class="form-select" id="country">
+                      <option selected>請選擇執事</option>
+                      <option value="知客師">知客師</option>
+                      <option value="總知客">總知客</option>
+                      <option value="副總知客">副總知客</option>
+                      <option value="知客志工">知客志工</option>
+                    </select>
+                  </div>
+                </form>
+                <h3 class="fw-bold fs-4 m-3">注意事項：</h3>
+                <p class="fs-5 text-primary text-center">
+                    註冊完成後，須等待系統管理員許可權限之後，<br>
+                    才能正常登入使用。</p>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center m-5">
+              <a
+                class="btn btn-outline-primary btn-lg px-5 py-2"
+                href="./info.html"
+                role="button"
+                >上一步</a
+              >
+              <a
+                class="btn btn-primary btn-lg px-5 py-2 ms-3"
+                href="../login.html"
+                role="button"
+                >下一步</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/all.js"></script>
+  </body>
+</html>

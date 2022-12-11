@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>寺務管理系統</title>
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"> -->
+    <link rel="stylesheet" href="../scss/all.css" />
+  </head>
+  <body>
+    <!-- 表頭導覽列 -->
+    <nav class="navbar navbar-light bg-white fixed-top">
+    </nav>
+
+    <div class="d-flex">
+      <!-- 側邊選單 -->
+      <div class="collapse show collapse-horizontal" id="sidebar">
+        
+      </div>
+
+      <!-- 主要頁面 -->
+      <main class="main">
+        <div class=" container">
+          <button
+              class="navbar-toggler my-0 d-none d-lg-inline-block toggle-btn mt-2"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#sidebar"
+            ><span class="material-icons-outlined fs-2">menu</span>
+          </button>
+
+          <div class="d-flex justify-content-around mt-3">
+          <div></div>  
+          <h2 class="fw-bolder text-center align-self-end">使用者權限管理</h2>
+          <img src="../img/2.Logo2.png" alt="" width="60"
+          height="80">
+          </div>
+
+          <form class="row row-cols-lg-auto d-flex align-items-center g-3 my-3">  
+            <h3 class="fw-bolder ">查詢權限名單：</h3>
+
+            <div class="col-12">
+              <label class="visually-hidden" for="inlineFormSelectPref"
+                >Preference</label
+              >
+              <select class="form-select form-select-lg" id="inlineFormSelectPref">
+                <option selected>選擇執事堂口名稱</option>
+                <option value="">所有執事堂口</option>
+                <option value="知客">知客</option>
+                <option value="寮房">寮房</option>
+                <option value="系統管理員">系統管理員</option>
+              </select>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col">
+              <h3 class="fw-bolder my-3">知客 :</h3>
+              <table
+                class="table table-light  table-bordered border-dark border-5 text-center align-middle table-hover"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col">編號</th>
+                    <th scope="col">性別</th>
+                    <th scope="col">法名</th>
+                    <th scope="col">俗名</th>
+                    <th scope="col">電話</th>
+                    <th scope="col">執事名稱</th>
+                    <th scope="col">核發權限者</th>
+                    <th scope="col">核發權限日期</th>
+                    <th scope="col">操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>男</td>
+                    <td>普己</td>
+                    <td>王大信</td>
+                    <td>0910111222</td>
+                    <td>總知客</td>
+                    <td>普甲</td>
+                    <td>8/5</td>
+                    <td class="d-flex justify-content-around">
+                      <button type="button" class="btn btn-primary">
+                        詳細資料
+                      </button>
+                      <button type="button" class="btn btn-outline-secondary">
+                        修改
+                      </button>
+                      <button type="button" class="btn btn-outline-danger">
+                        移除
+                      </button>
+                    </td>
+                  </tr>
+    
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>女</td>
+                    <td>普張</td>
+                    <td>王大信</td>
+                    <td>0910111222</td>
+                    <td>知客志工</td>
+                    <td>普甲</td>
+                    <td>8/5</td>
+                    <td class="d-flex justify-content-around">
+                      <button type="button" class="btn btn-primary">
+                        詳細資料
+                      </button>
+                      <button type="button" class="btn btn-outline-secondary">
+                        修改
+                      </button>
+                      <button type="button" class="btn btn-outline-danger">
+                        移除
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+    
+              <h3 class="fw-bolder my-3">寮房 :</h3>
+              <table
+                class="table table-light  table-bordered border-dark border-5 text-center align-middle table-hover"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col">編號</th>
+                    <th scope="col">性別</th>
+                    <th scope="col">法名</th>
+                    <th scope="col">俗名</th>
+                    <th scope="col">電話</th>
+                    <th scope="col">執事名稱</th>
+                    <th scope="col">核發權限者</th>
+                    <th scope="col">核發權限日期</th>
+                    <th scope="col">操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>男</td>
+                    <td>普子師</td>
+                    <td>王大信</td>
+                    <td>0910111222</td>
+                    <td>寮房師</td>
+                    <td>普甲</td>
+                    <td>8/5</td>
+                    <td class="d-flex justify-content-around">
+                      <button type="button" class="btn btn-primary">
+                        詳細資料
+                      </button>
+                      <button type="button" class="btn btn-outline-secondary">
+                        修改
+                      </button>
+                      <button type="button" class="btn btn-outline-danger">
+                        移除
+                      </button>
+                    </td>
+                  </tr>
+    
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>男</td>
+                    <td>普己</td>
+                    <td>王大信</td>
+                    <td>0910111222</td>
+                    <td>寮房志工</td>
+                    <td>普甲</td>
+                    <td>8/5</td>
+                    <td class="d-flex justify-content-around">
+                      <button type="button" class="btn btn-primary">
+                        詳細資料
+                      </button>
+                      <button type="button" class="btn btn-outline-secondary">
+                        修改
+                      </button>
+                      <button type="button" class="btn btn-outline-danger">
+                        移除
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+    
+              <h3 class="fw-bolder my-3">系統管理員 :</h3>
+              <table
+                class="table table-light  table-bordered border-dark border-5 text-center align-middle table-hover"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col">編號</th>
+                    <th scope="col">性別</th>
+                    <th scope="col">法名</th>
+                    <th scope="col">俗名</th>
+                    <th scope="col">電話</th>
+                    <th scope="col">執事名稱</th>
+                    <th scope="col">核發權限者</th>
+                    <th scope="col">核發權限日期</th>
+                    <th scope="col">操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>男</td>
+                    <td>普子師</td>
+                    <td>王大信</td>
+                    <td>0910111222</td>
+                    <td>寮房師</td>
+                    <td>普甲</td>
+                    <td>8/5</td>
+                    <td class="d-flex justify-content-around">
+                      <button type="button" class="btn btn-primary">
+                        詳細資料
+                      </button>
+                      <button type="button" class="btn btn-outline-secondary">
+                        修改
+                      </button>
+                      <button type="button" class="btn btn-outline-danger">
+                        移除
+                      </button>
+                    </td>
+                  </tr>
+    
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>男</td>
+                    <td>普己</td>
+                    <td>王大信</td>
+                    <td>0910111222</td>
+                    <td>寮房志工</td>
+                    <td>普甲</td>
+                    <td>8/5</td>
+                    <td class="d-flex justify-content-around">
+                      <button type="button" class="btn btn-primary">
+                        詳細資料
+                      </button>
+                      <button type="button" class="btn btn-outline-secondary">
+                        修改
+                      </button>
+                      <button type="button" class="btn btn-outline-danger">
+                        移除
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+        </div>
+      </main>
+    </div>
+
+    <!-- moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    
+    <!-- axios -->
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/templeSystem/pages/js/all.js"></script>
+    <script src="/templeSystem/pages/js/auth-mgmt.js"></script>
+  </body>
+</html>

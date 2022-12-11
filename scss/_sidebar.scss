@@ -1,0 +1,76 @@
+$sidebar-width: 312px;
+
+//行動版（預設）
+.sidebar {
+  width: 100%;
+  padding-top: 106px;
+  position: sticky;
+
+  .sidebar-link {
+    color: $black;
+    font-weight: bolder;
+    padding: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 12px;
+    &:hover {
+      background-color: #f9f9f9;
+    }
+    &:active {
+      background-color: $primary;
+      color: white;
+      p {
+        color: white;
+      }
+    }
+  }
+
+  .sidebar-link.active {
+    background-color: $primary;
+    color: white;
+    p {
+      color: white;
+    }
+  }
+}
+
+.main {
+  padding-top: 106px;
+}
+
+//展開 sidebar
+.sidebar-toggled {
+  .sidebar {
+    margin-left: 0;
+  }
+}
+
+//桌面版
+@include media-breakpoint-up(lg) {
+  .sidebar {
+    width: $sidebar-width;
+    margin-left: 0;
+  }
+
+  .main {
+    width: calc(100vw - #{$sidebar-width});
+    padding-top: 106px;
+  }
+
+  //展開 sidebar
+  .sidebar-toggled {
+    .sidebar {
+      margin-left: -$sidebar-width;
+    }
+    .main {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+.main {
+  .right {
+    height: 100vh;
+  }
+}

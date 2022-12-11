@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>寺務管理系統</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <link rel="stylesheet" href="../scss/all.css" />
+  </head>
+  <body>
+    <!-- 表頭導覽列 -->
+    <nav class="navbar navbar-light bg-white fixed-top">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <button
+            class="navbar-toggler my-0 d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#sidebar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a
+            class="navbar-brand d-flex align-items-center mx-2"
+            href="../admin/index.html"
+          >
+            <img
+              src="../img/1.Logo1.png"
+              alt=""
+              width="49"
+              height="80"
+              class="d-none d-lg-inline-block align-text-top me-3"
+            />
+            <img
+              src="../img/1.Logo1.png"
+              alt=""
+              width="20"
+              height="32"
+              class="d-inline-block d-lg-none align-text-top me-1"
+            />
+            <img
+              src="../img/3.tittle.png"
+              alt=""
+              width="228"
+              height="39"
+              class="d-none d-lg-inline-block align-text-top"
+            />
+            <h1
+              class="h2 fw-bolder d-none d-lg-inline-block align-text-top ms-5"
+            >
+              寺務管理系統
+            </h1>
+            <h1 class="h5 fw-bolder d-lg-none align-text-top m-0">
+              寺務管理系統
+            </h1>
+          </a>
+        </div>
+
+        <form class="d-flex align-items-center">
+          <span
+            class="search-group-icon input-group-text material-icons-outlined pe-1 d-none d-lg-inline-block"
+            id="basic-addon1"
+            >search</span
+          >
+          <input
+            type="text"
+            class="form-control search-group-input ps-1 d-none d-lg-inline-block"
+            placeholder="嘗試搜尋公告關鍵字"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
+
+          <a href="#" class="link-dark">
+            <span
+              class="material-icons-outlined border rounded-circle p-2 mx-2 mx-lg-3"
+            >
+              notifications
+            </span>
+          </a>
+
+          <div class="dropdown me-lg-3">
+            <a
+              class="btn dropdown-toggle d-flex px-0 align-items-center material-icons-outlined"
+              href="#"
+              role="button"
+              id="accountMemu"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span
+                class="material-icons-outlined border rounded-circle p-2 text-primary me-lg-3"
+                >account_circle</span
+              >
+              <span class="h5 m-0 fw-bolder d-none d-lg-inline-block"
+                >知客 普某菩薩</span
+              >
+            </a>
+
+            <ul
+              class="dropdown-menu dropdown-menu-end nav-accounts"
+              aria-labelledby="accountMemu"
+            >
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <span class="material-icons-outlined me-1"
+                    >manage_accounts</span
+                  >
+                  <span class="fs-5">帳號設定</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <span class="material-icons-outlined me-1">logout</span>
+                  <span class="fs-5">登出</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </nav>
+
+    <div class="d-flex">
+      <!-- 側邊選單 -->
+      <div class="collapse show collapse-horizontal" id="sidebar">
+        <aside
+          class="sidebar vh-100 d-flex bg-white flex-column overflow-auto collapse sticky-top"
+        >
+          <!-- 選單 -->
+          <a href="index.html" class="sidebar-link">
+            <div class="d-flex align-items-center fs-5">
+              <span class="material-icons-outlined me-2">home</span>
+              首頁
+            </div>
+          </a>
+
+          <!-- 系統管理 -->
+          <a
+            data-bs-toggle="collapse"
+            class="sidebar-link"
+            href="#menu-system"
+            role="button"
+          >
+            <div class="d-flex justify-content-between fs-5">
+              <p class="mb-0 d-flex align-items-center">
+                <span class="material-icons-outlined me-2">build</span>
+                系統管理
+              </p>
+              <span class="material-icons-outlined"> keyboard_arrow_down </span>
+            </div>
+          </a>
+
+          <!-- 系統管理子選單 -->
+          <div class="collapse show ps-3" id="menu-system">
+            <!-- 使用者權限 -->
+            <div class="sidebar-link">
+              <a
+                data-bs-toggle="collapse"
+                class="link-dark"
+                href="#menu-authority"
+                role="button"
+              >
+                <div class="d-flex justify-content-between fs-5">
+                  <p class="mb-0 d-flex align-items-center">
+                    <span class="material-icons-outlined me-2">vpn_key</span>
+                    使用者權限
+                  </p>
+                  <span class="material-icons-outlined">
+                    keyboard_arrow_down
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            <!-- 使用者權限選單 -->
+            <div class="collapse ps-4" id="menu-authority">
+              <div
+                class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5"
+              >
+                <a class="link-dark" href="auth-mgmt.html" role="button">
+                  <p class="m-0">使用者權限管理</p>
+                </a>
+              </div>
+              <div
+                class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5"
+              >
+                <a class="link-dark" href="auth-issuance.html" role="button">
+                  <p class="m-0">使用者權限核發</p>
+                </a>
+              </div>
+            </div>
+
+            <!-- 系統設定 -->
+            <div class="sidebar-link">
+              <a
+                data-bs-toggle="collapse"
+                class="link-dark"
+                href="#menu-system-setting"
+                role="button"
+              >
+                <div class="d-flex justify-content-between fs-5">
+                  <p class="mb-0 d-flex align-items-center">
+                    <span class="material-icons-outlined me-2">settings</span>
+                    系統設定
+                  </p>
+                  <span class="material-icons-outlined">
+                    keyboard_arrow_down
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            <!-- 系統設定選單 -->
+            <div class="collapse show ps-4" id="menu-system-setting">
+              <div
+                class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5 active"
+              >
+                <a class="link-dark" href="buddha-seven.html" role="button">
+                  <p class="m-0">佛七期數設定</p>
+                </a>
+              </div>
+              <div
+                class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5"
+              >
+                <a
+                  data-bs-toggle="collapse"
+                  class="link-dark"
+                  href="#"
+                  role="button"
+                >
+                  <p class="m-0">行事曆</p>
+                </a>
+              </div>
+            </div>
+
+            <!-- 系統公告 -->
+            <div class="sidebar-link">
+              <a
+                data-bs-toggle="collapse"
+                class="link-dark"
+                href="#menu-system-post"
+                role="button"
+              >
+                <div class="d-flex justify-content-between fs-5">
+                  <p class="mb-0 d-flex align-items-center">
+                    <span class="material-icons-outlined me-2"
+                      >notifications</span
+                    >
+                    系統公告
+                  </p>
+                  <span class="material-icons-outlined">
+                    keyboard_arrow_down
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            <!-- 系統公告選單 -->
+            <div class="collapse ps-4" id="menu-system-post">
+              <div
+                class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5"
+              >
+                <a class="link-dark" href="../create-post.html" role="button">
+                  <p class="m-0">新增公告</p>
+                </a>
+              </div>
+              <div
+                class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5"
+              >
+                <a class="link-dark" href="../search-post.html" role="button">
+                  <p class="m-0">歷史公告查詢</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 知客 -->
+          <a
+            data-bs-toggle="collapse"
+            class="sidebar-link"
+            href="#menu-service"
+            role="button"
+          >
+            <div class="d-flex justify-content-between fs-5">
+              <p class="mb-0 d-flex align-items-center">
+                <span class="material-icons-outlined me-2">group</span>
+                知客
+              </p>
+              <span class="material-icons-outlined"> keyboard_arrow_down </span>
+            </div>
+          </a>
+
+          <!-- 知客子選單 -->
+          <div class="collapse ps-3" id="menu-service">
+            
+            <!-- 佛七報名預約 -->
+            <div class="sidebar-link ">
+              <a
+                data-bs-toggle="collapse"
+                class="link-dark "
+                href="#menu-buddha7"
+                role="button"
+              >
+                <div class="d-flex justify-content-between fs-5">
+                  <p class="mb-0 d-flex align-items-center">
+                    <span class="material-icons-outlined me-2">note_alt</span>
+                    佛七報名預約
+                  </p>
+                  <span class="material-icons-outlined">
+                    keyboard_arrow_down
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            <!-- 佛七報名預約選單 -->
+            <div class="collapse ps-4" id="menu-buddha7">
+              <div class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5 ">
+                <a
+                  class="link-dark"
+                  href="#"
+                  role="button"
+                >
+                <p class="m-0">佛七報名預約名單</p>
+                </a>
+              </div>
+              <div class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5">
+                <a
+                  class="link-dark"
+                  href="#"
+                  role="button"
+                >
+                <p class="m-0">報名佛七</p>
+                </a>
+              </div>
+              <div class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5">
+                <a
+                  class="link-dark"
+                  href="#"
+                  role="button"
+                >
+                <p class="m-0">佛七報到</p>
+                </a>
+              </div>
+            </div>
+
+            <!-- 皈依報名 -->
+            <div class="sidebar-link">
+              <a
+                data-bs-toggle="collapse"
+                class="link-dark"
+                href="#menu-refuge"
+                role="button"
+              >
+                <div class="d-flex justify-content-between fs-5">
+                  <p class="mb-0 d-flex align-items-center">
+                    <span class="material-icons-outlined me-2">person_add_alt</span>
+                    皈依報名
+                  </p>
+                  <span class="material-icons-outlined">
+                    keyboard_arrow_down
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            <!-- 皈依報名選單 -->
+            <div class="collapse ps-4" id="menu-refuge">
+              <div class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5 ">
+                <a
+                  class="link-dark"
+                  href="#"
+                  role="button"
+                >
+                <p class="m-0">皈依報名名單</p>
+                </a>
+              </div>
+              <div class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5">
+                <a
+                  data-bs-toggle="collapse"
+                  class="link-dark"
+                  href="#"
+                  role="button"
+                >
+                <p class="m-0">報名皈依</p>
+                </a>
+              </div>
+              <div class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5">
+                <a
+                  data-bs-toggle="collapse"
+                  class="link-dark"
+                  href="#"
+                  role="button"
+                >
+                <p class="m-0">皈依資料建檔</p>
+                </a>
+              </div>
+            </div>
+
+            <!-- 參訪及活動 -->
+            <div class="sidebar-link">
+              <a
+                data-bs-toggle="collapse"
+                class="link-dark"
+                href="#menu-activity"
+                role="button"
+              >
+                <div class="d-flex justify-content-between fs-5">
+                  <p class="mb-0 d-flex align-items-center">
+                    <span class="material-icons-outlined me-2"
+                      >event</span
+                    >
+                    參訪及活動
+                  </p>
+                  <span class="material-icons-outlined">
+                    keyboard_arrow_down
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            <!-- 參訪及活動選單 -->
+            <div class="collapse ps-4" id="menu-activity">
+              <div class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5 ">
+                <a
+                  class="link-dark"
+                  href="#"
+                  role="button"
+                >
+                <p class="m-0">來寺參訪預約</p>
+                </a>
+              </div>
+              <div class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5">
+                <a
+                  class="link-dark"
+                  href="#"
+                  role="button"
+                >
+                <p class="m-0">參與活動人數登記</p>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- 寮房 -->
+          <a
+            data-bs-toggle="collapse"
+            class="sidebar-link"
+            href="#"
+            role="button"
+          >
+            <div class="d-flex justify-content-between fs-5">
+              <p class="mb-0 d-flex align-items-center">
+                <span class="material-icons-outlined me-2">bed</span>
+                寮房
+              </p>
+              <span class="material-icons-outlined"> keyboard_arrow_down </span>
+            </div>
+          </a>
+
+          <!-- 四眾個人資料 -->
+          <a
+            data-bs-toggle="collapse"
+            class="sidebar-link"
+            href="#"
+            role="button"
+          >
+            <div class="d-flex justify-content-between fs-5">
+              <p class="mb-0 d-flex align-items-center">
+                <span class="material-icons-outlined me-2">description</span>
+                四眾個人資料
+              </p>
+              <span class="material-icons-outlined"> keyboard_arrow_down </span>
+            </div>
+          </a>
+
+          <!-- 查詢用齋人數 -->
+          <a
+            data-bs-toggle="collapse"
+            class="sidebar-link"
+            href="#"
+            role="button"
+          >
+            <div class="d-flex justify-content-between fs-5">
+              <p class="mb-0 d-flex align-items-center">
+                <span class="material-icons-outlined me-2">local_dining</span>
+                查詢用齋人數
+              </p>
+              <span class="material-icons-outlined"> keyboard_arrow_down </span>
+            </div>
+          </a>
+
+          <!-- 登入按鈕 -->
+          <a href="#" class="sidebar-link mt-auto">
+            <div class="d-flex align-items-center fs-5">
+              <span class="material-icons-outlined me-2">logout</span>
+              登出
+            </div>
+          </a>
+        </aside>
+      </div>
+
+      <!-- 主要頁面 -->
+      <main class="main">
+        <button
+          class="navbar-toggler my-0 d-none d-lg-inline-block toggle-btn m-2"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#sidebar"
+        >
+          <span class="material-icons-outlined fs-1">menu</span>
+        </button>
+        <div class="container">
+          <div class="d-flex justify-content-around mt-3">
+            <div></div>
+            <h2 class="fw-bolder text-center align-self-end">佛七期數</h2>
+            <img src="../img/2.Logo2.png" alt="" width="60" height="80" />
+          </div>
+
+          <form class="row row-cols-lg-auto d-flex align-items-center g-3 mt-5">
+            <h3 class="fw-bolder">選擇年度：</h3>
+
+            <div class="col-12">
+              <label class="visually-hidden" for="inlineFormSelectPref"
+                >Preference</label
+              >
+              <select
+                class="form-select form-select-lg"
+                id="inlineFormSelectPref"
+              >
+                <option value="2022">2022</option>
+              </select>
+            </div>
+
+            <div class="col-12 ms-auto">
+              <button
+                type="button"
+                class="btn btn-primary btn-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#createYearBuddhaSevenModal"
+              >
+                新增佛七期數
+              </button>
+            </div>
+          </form>
+
+          <!-- 新增佛七期數表單 -->
+          <!-- 新增年度佛七 -->
+          <div
+            class="modal fade"
+            id="createYearBuddhaSevenModal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+          >
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title text-center fw-bolder">
+                    新增整年度佛七
+                  </h4>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <fieldset class="row mb-3">
+                      <legend class="col-form-label col-form-label-lg col-sm-3  m-0">
+                        新增佛七數量
+                      </legend>
+                      <div class="col-sm-9">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="buddha7Quantity"
+                            id="allYear"
+                            value="新增整年度佛七"
+                            data-bs-target="#createYearBuddhaSevenModal" data-bs-toggle="modal"
+                            checked
+                          />
+                          <label class="form-check-label" for="year">
+                            新增整年度佛七
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="buddha7Quantity"
+                            id="single"
+                            value="新增單期佛七"
+                            data-bs-target="#createOneBuddhaSevenModal" data-bs-toggle="modal"
+                          />
+                          <label class="form-check-label " for="single">
+                            新增單期佛七
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <div class="row mb-3">
+                      <label for="year" class="col-sm-3 col-form-label col-form-label-lg"
+                        >年份</label
+                      >
+                      <div class="col-sm-2">
+                        <input
+                          type="number"
+                          class="form-control form-control-lg "
+                          id="year"
+                          min="2010" max="2030" step="1" value="2022"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="row mb-3 gx-1">
+                      <label
+                        for="theFirstBuddhaSevenStart"
+                        class="col-sm-3 col-form-label col-form-label-lg"
+                        >本年度第一期佛七</label
+                      >
+                      <div class="col-sm-6 d-flex">
+                        <div class="me-2">
+                          <input
+                            type="text"
+                            class="form-control form-control-lg"
+                            id="theFirstBuddhaSevenStart"
+                            placeholder="起七日"
+                          />
+                        </div>
+                        <div class="">
+                          <input
+                            type="text"
+                            class="form-control form-control-lg"
+                            id="theFirstBuddhaSevenEnd"
+                            placeholder="圓滿日"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-5 mb-3 justify-content-center">
+                      <div class="col-4 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-lg btn-primary">
+                          新增整年度佛七
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <!-- 新增單期佛七 -->
+          <div
+            class="modal fade"
+            id="createOneBuddhaSevenModal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+          >
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title text-center fw-bolder">
+                    新增單筆佛七
+                  </h4>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <fieldset class="row mb-3">
+                      <legend class="col-form-label col-form-label-lg col-sm-3  m-0">
+                        新增佛七數量
+                      </legend>
+                      <div class="col-sm-9">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="buddha7Quantity"
+                            id="allYear"
+                            value="新增整年度佛七"
+                            data-bs-target="#createYearBuddhaSevenModal" data-bs-toggle="modal"
+                            
+                          />
+                          <label class="form-check-label" for="allYear">
+                            新增整年度佛七
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="buddha7Quantity"
+                            id="single"
+                            value="新增單期佛七"
+                            data-bs-target="#createOneBuddhaSevenModal" data-bs-toggle="modal"
+                            checked
+                          />
+                          <label class="form-check-label " for="single">
+                            新增單期佛七
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <div class="row mb-3">
+                      <label for="year" class="col-sm-3 col-form-label col-form-label-lg"
+                        >年份</label
+                      >
+                      <div class="col-sm-2">
+                        <input
+                          type="number"
+                          class="form-control form-control-lg "
+                          id="year"
+                          min="2010" max="2030" step="1" value="2022"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="year" class="col-sm-3 col-form-label col-form-label-lg"
+                        >佛七期數</label
+                      >
+                      <div class="col-sm-2">
+                        <input
+                          type="number"
+                          class="form-control form-control-lg "
+                          id="buddha-seven-num"
+                          min="1"
+                          step="1" 
+                        />
+                      </div>
+                    </div>
+
+                    <div class="row mb-3 gx-1">
+                      <label
+                        for="buddha7Start"
+                        class="col-sm-3 col-form-label col-form-label-lg"
+                        >佛七起訖日</label
+                      >
+                      <div class="col-sm-6 d-flex">
+                        <div class="me-2">
+                          <input
+                            type="text"
+                            class="form-control form-control-lg"
+                            id="buddha7Start"
+                            placeholder="起七日"
+                          />
+                        </div>
+                        <div class="">
+                          <input
+                            type="text"
+                            class="form-control form-control-lg"
+                            id="buddha7End"
+                            placeholder="圓滿日"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-5 mb-3 justify-content-center">
+                      <div class="col-4 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-lg btn-primary">
+                          新增佛七
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <!-- 佛七期數總表 -->
+          <div class="row">
+            <div class="col">
+              <table
+                class="table table-light table-bordered border-dark border-5 text-center align-middle table-hover my-3"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col" width="5%" >期數</th>
+                    <th scope="col" width="10%" >起七日</th>
+                    <th scope="col" width="10%" >圓滿日</th>
+                    <th scope="col" width="15%">備註</th>
+                    <th scope="col" width="10%" >操作</th>
+                  </tr>
+                </thead>
+                <tbody id="thisYearBuddha7">
+                  <tr>
+                    <th scope="row">442</th>
+                    <td>2022/9/1</td>
+                    <td>2022/9/7</td>
+                    <td></td>
+                    <td class="d-flex justify-content-evenly">
+                      <button type="button" class="btn btn-outline-secondary">
+                        修改
+                      </button>
+                      <button type="button" class="btn btn-outline-danger">
+                        移除
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">443</th>
+                    <td>2022/9/11</td>
+                    <td>2022/9/17</td>
+                    <td></td>
+                    <td class="d-flex justify-content-evenly">
+                      <button type="button" class="btn btn-outline-secondary">
+                        修改
+                      </button>
+                      <button type="button" class="btn btn-outline-danger">
+                        移除
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h4 class="fw-bolder mt-5">已圓滿：</h4>
+              <table
+                class="table table-light table-bordered border-dark border-5 text-center align-middle table-hover my-4"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col" width="5%">期數</th>
+                    <th scope="col" width="10%">起七日</th>
+                    <th scope="col" width="10%">圓滿日</th>
+                    <th scope="col" width="15%">備註</th>
+                    <th scope="col" width="10%">操作</th>
+                  </tr>
+                </thead>
+                <tbody id="finished">
+                  <tr>
+                    <th scope="row">418</th>
+                    <td>2022/1/1</td>
+                    <td>2022/1/7</td>
+                    <td></td>
+                    <td class="d-flex justify-content-evenly">
+                      <button type="button" class="btn btn-outline-secondary">
+                        修改
+                      </button>
+                      <button type="button" class="btn btn-outline-danger">
+                        移除
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">419</th>
+                    <td>2022/1/11</td>
+                    <td>2022/1/17</td>
+                    <td></td>
+                    <td class="d-flex justify-content-evenly">
+                      <button type="button" class="btn btn-outline-secondary">
+                        修改
+                      </button>
+                      <button type="button" class="btn btn-outline-danger">
+                        移除
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+     <!-- moment.js -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+
+     <!-- bootstrap -->
+     <script
+       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+       crossorigin="anonymous"
+     ></script>
+     
+       <!-- axios -->
+       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/all.js"></script>
+    <script src="../js/buddhaSeven.js"></script>
+  </body>
+</html>
