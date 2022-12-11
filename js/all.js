@@ -18,7 +18,7 @@ function renderSidebar(){
   class="sidebar vh-100 d-flex bg-white flex-column overflow-auto collapse sticky-top"
 >
   <!-- 首頁 -->
-  <a href="/templeSystem/pages/homePage.html" class="sidebar-link">
+  <a href="/homePage.html" class="sidebar-link">
     <div class="d-flex align-items-center fs-5">
       <span class="material-icons-outlined me-2">home</span>
       首頁
@@ -72,7 +72,7 @@ function renderSidebar(){
       <div class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5" data-sidebar="使用者權限管理">
         <a
           class="link-dark"
-          href="/templeSystem/pages/admin/auth-mgmt.html"
+          href="/admin/auth-mgmt.html"
           role="button"
         >
         <p class="m-0">使用者權限管理</p>
@@ -81,7 +81,7 @@ function renderSidebar(){
       <div class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5" data-sidebar="使用者權限核發">
         <a
           class="link-dark"
-          href="/templeSystem/pages/admin/auth-issuance.html"
+          href="/admin/auth-issuance.html"
           role="button"
         >
         <p class="m-0">使用者權限核發</p>
@@ -114,7 +114,7 @@ function renderSidebar(){
       <div class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5 "data-sidebar="佛七期數設定">
         <a
           class="link-dark"
-          href="/templeSystem/pages/admin/buddha-seven.html"
+          href="/admin/buddha-seven.html"
           role="button"
         >
         <p class="m-0">佛七期數設定</p>
@@ -159,7 +159,7 @@ function renderSidebar(){
       <div class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5 "data-sidebar="新增公告">
         <a
           class="link-dark"
-          href="/templeSystem/pages/admin/create-post.html"
+          href="/admin/create-post.html"
           role="button"
         >
         <p class="m-0">新增公告</p>
@@ -168,7 +168,7 @@ function renderSidebar(){
       <div class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5" data-sidebar="歷史公告查詢">
         <a
           class="link-dark"
-          href="/templeSystem/pages/search-post.html"
+          href="/search-post.html"
           role="button"
         >
         <p class="m-0">歷史公告查詢</p>
@@ -273,7 +273,7 @@ function renderSidebar(){
       <div class="sidebar-link border-start border-neutral-40 border-4 rounded-0 rounded-end fs-5 " data-sidebar="皈依報名名單">
         <a
           class="link-dark"
-          href="/templeSystem/pages/receptionist/applied-refuge-list.html"
+          href="/receptionist/applied-refuge-list.html"
           role="button"
         >
         <p class="m-0">皈依報名名單</p>
@@ -431,16 +431,16 @@ function renderNavbar(){
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand d-flex align-items-center mx-2" href="/templeSystem/pages/homePage.html">
+          <a class="navbar-brand d-flex align-items-center mx-2" href="/homePage.html">
             <img
-              src="/templeSystem/pages/img/1.Logo1.png"
+              src="/img/1.Logo1.png"
               alt=""
               width="49"
               height="80"
               class="d-none d-lg-inline-block align-text-top me-3"
             />
             <img
-              src="/templeSystem/pages/img/3.tittle.png"
+              src="/img/3.tittle.png"
               alt=""
               width="228"
               height="39"
@@ -645,7 +645,7 @@ const i18n = {
 function isLogin(){
   if( !token ){
     alert("尚未登入，請登入！");
-    location.href = "/templeSystem/pages/index.html";
+    location.href = "/index.html";
   }
 }
 
@@ -666,7 +666,7 @@ function logout(){
   alert("已經登出，將跳轉至登入頁")
   localStorage.setItem("token","");
   localStorage.setItem("id", "");
-  location.href = "/templeSystem/pages/index.html";
+  location.href = "/index.html";
 }
 
 // 初始化

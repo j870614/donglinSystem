@@ -69,6 +69,7 @@ sendBtn.addEventListener("click", (e) => {
   postObj.kind = kind;
   postObj.content = content;
   addPost(postObj);
+  
 });
 
 //新增公告
