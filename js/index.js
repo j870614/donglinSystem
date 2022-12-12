@@ -18,12 +18,12 @@ loginBtn.addEventListener("click", e=>{
 })
 
 // 登入
-function longin(result){
+function login(result){
     const token = result.accessToken;
     const id = result.user.id;
     localStorage.setItem("token",token);
     localStorage.setItem("id",id);
-    location.href = "./homePage.html";
+    location.href = "./share-Pages/homePage.html";
 }
 
 // 登入 API 介接
@@ -32,7 +32,7 @@ function sendLogin(loginInfo) {
     axios.post(`${basicURL}login`, loginInfo)
     .then(function (response) {
         result = response.data;
-        longin(result);
+        login(result);
     })
     .catch(function (error) {
         result = error.response.data;
