@@ -1,5 +1,5 @@
 // API 設定
-const basicURL = `https://json-server-jraf.onrender.com/`;
+const basicURL = `https://json-server-cu4x.onrender.com/`;
 // 登入表單
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
