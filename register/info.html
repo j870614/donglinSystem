@@ -23,35 +23,25 @@
           </button>
           <a
             class="navbar-brand d-flex align-items-center mx-2"
-            href="../admin/index.html"
+            href="../index.html"
           >
             <img
               src="../img/1.Logo1.png"
               alt=""
               width="49"
               height="80"
-              class="d-none d-lg-inline-block align-text-top me-3"
-            />
-            <img
-              src="../img/1.Logo1.png"
-              alt=""
-              width="20"
-              height="32"
-              class="d-inline-block d-lg-none align-text-top me-1"
+              class="align-text-top me-3"
             />
             <img
               src="../img/3.tittle.png"
               alt=""
               width="228"
               height="39"
-              class="d-none d-lg-inline-block align-text-top"
+              class="align-text-top"
             />
             <h1
-              class="h2 fw-bolder d-none d-lg-inline-block align-text-top ms-5"
+              class="h2 fw-bolder align-text-top ms-5"
             >
-              寺務管理系統
-            </h1>
-            <h1 class="h5 fw-bolder d-lg-none align-text-top m-0">
               寺務管理系統
             </h1>
           </a>
@@ -100,7 +90,7 @@
                   >
                 </div>
 
-                <form class="row g-3 mt-1">
+                <form class="row g-3 mt-1" id="directoryForm">
                   <div class="col-12">
                     <h2 class="fw-bold fs-3">通訊方式</h2>
                   </div>
@@ -115,21 +105,21 @@
                   </div>
 
                   <div class="col-md-6">
-                    <label for="alias" class="form-label">市話號碼</label>
+                    <label for="telephone" class="form-label">市話號碼</label>
                     <input
                       type="number"
                       class="form-control"
-                      id="alias"
+                      id="telephone"
                       placeholder="請輸入市話號碼"
                     />
                   </div>
 
                   <div class="col-md-4">
-                    <label for="name" class="form-label">LineID</label>
+                    <label for="lineID" class="form-label">LineID</label>
                     <input
                       type="text"
                       class="form-control"
-                      id="name"
+                      id="lineID"
                       placeholder="請輸入LineID"
                     />
                   </div>
@@ -149,13 +139,13 @@
                     </div>
 
                     <div class="col-md-4">
-                      <label for="DateOfOrdination" class="form-label"
+                      <label for="zip" class="form-label"
                         >郵遞區號</label
                       >
                       <input
                         type="text"
                         class="form-control"
-                        id="DateOfOrdination"
+                        id="zip"
                         placeholder="郵遞區號"
                         value="郵遞區號"
                         disabled
@@ -196,7 +186,7 @@
           <div class="col-lg-5">
             <div class="card p-2">
               <div class="card-body">
-                <h2 class="fw-bold fs-3">請填寫您的身份別</h2>
+                <h2 class="fw-bold fs-3">請選擇您的身份別</h2>
                 <div
                   class="form-check form-check-inline d-inline-flex align-items-center"
                   role="presentation"
@@ -230,102 +220,8 @@
                   >
                 </div>
 
-                <form class="row g-3 mt-1">
-                  <div class="col-md-4">
-                    <label for="dharmaName" class="form-label">外號</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="dharmaName"
-                      placeholder="請輸入外號"
-                    />
-                  </div>
-
-                  <div class="col-md-4">
-                    <label for="alias" class="form-label">內號</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="alias"
-                      placeholder="請輸入內號"
-                    />
-                  </div>
-
-                  <div class="col-md-4">
-                    <label for="name" class="form-label">俗名</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="name"
-                      placeholder="請輸入姓名"
-                    />
-                  </div>
-
-                  <div class="col-md-4">
-                    <label for="birthday" class="form-label">出生年月日</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="birthday"
-                      placeholder="請輸入出生年月日"
-                    />
-                  </div>
-
-                  <div class="row g-3">
-                    <div class="col-md-4">
-                      <label for="placeOfOrdination" class="form-label"
-                        >受戒道場</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="placeOfOrdination"
-                        placeholder="請輸入受戒道場"
-                      />
-                    </div>
-
-                    <div class="col-md-4">
-                      <label for="DateOfOrdination" class="form-label"
-                        >受具足戒日期</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="DateOfOrdination"
-                        placeholder="請輸入受戒日期"
-                      />
-                    </div>
-
-                    <div class="col-md-4">
-                      <label for="numOfAltar" class="form-label">壇別</label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="numOfAltar"
-                        placeholder="請輸入壇別"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <label for="masterOfTonsure" class="form-label"
-                      >剃度師長徳號</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="masterOfTonsure"
-                      placeholder="請輸入剃度師長徳號"
-                    />
-                  </div>
-                  <div class="col-6">
-                    <label for="livingTemple" class="form-label">寶剎</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="livingTemple"
-                      placeholder="請輸入常住道場名稱"
-                    />
-                  </div>
+                <form class="row g-3 mt-1" id="identityForm">
+                  
                 </form>
               </div>
             </div>
@@ -344,6 +240,7 @@
                   class="btn btn-primary btn-lg px-5 py-2 ms-3"
                   href="./request-auth.html"
                   role="button"
+                  id="nextStep"
                   >下一步</a
                 >
               </div>
@@ -357,11 +254,18 @@
       </div>
     </main>
 
+    <!-- moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+
+    <!-- bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/all.js"></script>
+    
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/info.js"></script>
   </body>
 </html>
