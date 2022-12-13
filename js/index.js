@@ -1,5 +1,5 @@
 // API 設定
-const basicURL = `http://localhost:3000/`;
+const basicURL = `https://json-server-jraf.onrender.com/`;
 // 登入表單
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
